@@ -32,7 +32,15 @@
   .mins { font-family: 'Antonio', Impact, sans-serif; font-size: 11px; color: #946E24;
     letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
   .sec { border: 1px solid #E4E4E4; border-left: 3px solid #CFAE70; border-radius: 4px;
-    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid; }
+    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid;
+    display: grid; grid-template-columns: 290px 1fr; gap: 16px; align-items: start; }
+  .sec.noimg { grid-template-columns: 1fr; }
+  .sec.noimg .sec__shot { display: none; }
+  .sec__shot { position: sticky; top: 12px; }
+  .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__notes { min-width: 0; }
+  @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -81,6 +89,8 @@
   </div>
 
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the two norms that make personal material safe: roles never names, and nothing typed leaves the screen.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Today is about the skill that research keeps finding at the center of leadership — and it touches real relationships, so two ground rules for the next ninety minutes: we use roles, never names. And everything you type today stays on your screen; nothing is saved or sent anywhere. This is a practice room.&rdquo;</p>
@@ -91,8 +101,11 @@
     <p class="mini"><b>Watch for:</b> Anyone visibly bracing for a 'feelings workshop.' The frame that relaxes them: today is skills and reps, and the research is unusually hard-nosed.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: one scan prompt, both norms stated once, move on.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: six capabilities, ending in one committed practice aimed at one real relationship, with a date.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six things by the end: you'll know the four-domain map and where your own blind spots hide, the science underneath it, how naming an emotion precisely turns reactivity into a choice, how to listen so people actually feel heard — scored against a rubric, not vibes — how to rebuild an accusation into a request that works, and how to say a hard thing so it can be heard. It all lands in one artifact: a commitment card for a relationship you actually have.&rdquo;</p>
@@ -103,8 +116,11 @@
     <p class="mini"><b>Watch for:</b> The montage pulling attention; advance once the objectives have been read, not when the video loops.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Seven ideas, in a deliberate order.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: objectives 1 and 6 out loud; the rest on screen.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives: evidence, map, self, then others.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc is simple: first the evidence, then the map, then you — noticing and naming your own weather — and then the other person: listening, reframing, and saying the hard thing well.&rdquo;</p>
@@ -115,8 +131,11 @@
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the evidence, because half of you just called this a buzzword.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip entirely; the deck's structure carries it.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 01 · The case for EI" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>01 · The case for EI <span class="mins">Full 8 min · Core 5</span></h2>
     <p class="purpose">Convert skeptics with published numbers they guess at (and miss), establishing EI as an underpriced, rising-demand professional skill.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Before any tools, the evidence — and I want you to guess. When researchers studied what separates star performers from average ones across nearly two hundred companies, emotional intelligence came out roughly twice as important as IQ and technical skill combined, and the gap widened at senior levels. Most rooms guess those numbers wrong, which is exactly the point: we underestimate this skill the same way the market underprices it. Four findings, call your number before the reveal.&rdquo;</p>
@@ -127,8 +146,11 @@
     <p class="mini"><b>Watch for:</b> A statistics skeptic litigating one study's methodology. Don't defend a single number; the case is the convergence — four independent sources, one direction. Park deep methodology questions.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So if it matters that much, what exactly IS it? One sentence first — the whole session in nine words.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: Guess the Number as a fast room vote, quick check stays, best-leader activity becomes one show of hands with no pair discussion.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's core idea before the model arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;You can't manage an emotion you haven't named.&rdquo;</p>
@@ -139,8 +161,11 @@
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Everything today unpacks that sentence. Here's the map.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip; say the line yourself as you pass it.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-map.jpg" alt="Slide: 02 · The map (four domains)" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>02 · The map (four domains) <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install Goleman's four domains as a sequence (notice → steer → read → move together) with the Mayer-Salovey science named underneath, and make the model sight-readable in real moments.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Four domains, and the order is the insight. Self-awareness: noticing what you're feeling while it's happening. Self-management: the pause between stimulus and response. Social awareness: reading what everyone else is feeling — empathy as a skill, not a trait. And relationship management, where the first three pay off. It runs in sequence: you can't steer what you haven't noticed, and you can't manage a relationship before you can read the room. Underneath this sits Mayer and Salovey's ability model — the peer-reviewed science that made EI measurable — and knowing both keeps you honest: this is a testable ability, not a horoscope.&rdquo;</p>
@@ -151,8 +176,11 @@
     <p class="mini"><b>Watch for:</b> The model turning into a personality test ('I'm a self-awareness person'). Keep it behavioral: these are four trainable skill sets, not four types of people.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Domain one first — and the research on it is genuinely uncomfortable.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: cards fast, trainer on devices, cut the video (assign as the week's watch); the self-ranking shrinks to thirty silent seconds.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-johari.jpg" alt="Slide: 03 · Self-awareness &amp; the Johari Window" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>03 · Self-awareness &amp; the Johari Window <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Land the Eurich gap (95% believe, 10–15% are), install the Johari Window, and get each learner one written suspected blind spot plus the one feedback question that shrinks it.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Here's the most uncomfortable statistic of the day: ninety-five percent of people believe they're self-aware. When organizational psychologist Tasha Eurich actually measured it, ten to fifteen percent were. Which means most of us are wrong about the thing we're most confident about — ourselves. The Johari Window maps why: there's a quadrant of you that others can see and you can't, and it is invisible to introspection by definition. You cannot journal your way into your blind spot. Someone has to tell you — and the next three minutes, entirely on your own screen, is where you write down what you suspect they'd say.&rdquo;</p>
@@ -163,8 +191,11 @@
     <p class="mini"><b>Watch for:</b> Oversharing in the pair round — the exercise is calibrated to the Open quadrant for a reason. Also watch the cynic who writes nothing: invite them to map a former colleague instead; the model installs either way.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So you've mapped what you don't know about yourself. Next: the skill of catching what you're feeling while it's still happening — and the neuroscience is on your side.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: gap, quadrants, and the private mapper stay (protect field 3's quiet minute); the pair share drops to an optional 60 seconds; assign the Eurich TEDx as the week's watch.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-nameit.jpg" alt="Slide: 04 · Name it to tame it" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>04 · Name it to tame it <span class="mins">Full 8 min · Core 5</span></h2>
     <p class="purpose">Install affect labeling as a 90-second usable move — spike, precise silent label, breath, chosen response — backed by the UCLA evidence, with emotional granularity as the multiplier.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;UCLA scanned brains while people labeled emotions and found something you can use by Thursday: putting a feeling into words reduces activity in the amygdala — the alarm system — and engages the prefrontal cortex, the part that thinks. The label doesn't switch the feeling off; it turns the volume down enough to choose your response. And precision matters: 'stressed' gives you nothing to act on, but 'frustrated because the decision keeps moving' tells you exactly what conversation to have. Your grandmother called it counting to ten. She was right, and now there's a brain scan.&rdquo;</p>
@@ -175,8 +206,11 @@
     <p class="mini"><b>Watch for:</b> Two ditches: 'so I should suppress it' (no — labeling is the opposite of suppression; it's acknowledgment with a handle) and 'I should announce my feelings constantly' (the label is silent; disclosure is a separate, calibrated choice).</p>
     <p class="mini"><b>Transition:</b> &ldquo;That's the inward half of the session. Now we turn outward — and the first outward skill is the one everyone thinks they're good at.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: science in one line, trainer on devices, 90-second card verbatim; the solo drill shrinks to naming the precise word only.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-listening.jpg" alt="Slide: 05 · Active listening (triad drill)" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>05 · Active listening (triad drill) <span class="mins">Full 13 min · Core 9</span></h2>
     <p class="purpose">Install the three trainable moves (paraphrase, clarify, withhold judgment) and give every learner one scored rep in the triad drill — the session's deepest practice block.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Everyone in this room believes they're a good listener, and the last section told you what that belief is worth unaudited. Active listening is three trainable moves: paraphrase what you heard until they say 'yes, that.' Ask questions that open rather than steer. And the hard one — withhold judgment AND advice until asked. The moment you offer a fix, the speaker stops exploring and starts evaluating your fix, and the conversation quietly becomes about you. In a minute you'll each get scored on this by a human holding a rubric. Being scored once changes how you hear yourself in every conversation after — that's why we do it.&rdquo;</p>
@@ -187,8 +221,11 @@
     <p class="mini"><b>Watch for:</b> Advice leaking in dressed as questions ('have you tried…?' is advice with a question mark). Observers grading soft — remind them the score is a gift. Groups of two where the room doesn't divide by three: drop the Observer and self-score.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Listening earns you the right to be heard. Now the harder move: saying a charged thing without handing over ammunition.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: trainer stays, ONE triad rotation instead of three (everyone still sits in one seat), debrief in one voice. This is the floor — never cut the drill entirely.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-nvc.jpg" alt="Slide: 06 · The NVC reframe (OFNR lab)" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>06 · The NVC reframe (OFNR lab) <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Install Rosenberg's Observation-Feeling-Need-Request structure through the graded lab (feel the reply change as parts sharpen) and one pair conversion of a fresh accusation.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Here's the move for the moment you're upset and about to say something true in the most flammable possible way. Marshall Rosenberg's Nonviolent Communication rebuilds the charged statement in four parts. An Observation a camera would agree with — 'the last two status meetings happened without an update' — not 'you never tell me anything,' which is a verdict. A Feeling you actually own: 'I feel anxious,' not 'I feel ignored' — ignored is a diagnosis of them wearing a feeling's clothes. The Need underneath: 'I need to be able to plan reliably.' And a Request specific enough to act on, that survives hearing no. Same honesty. None of the ammunition. The lab lets you feel the reply change as each part sharpens — go break it and fix it.&rdquo;</p>
@@ -199,8 +236,11 @@
     <p class="mini"><b>Watch for:</b> The two failure points from Rosenberg's own teaching: observations that are secretly judgments ('always,' 'never' are verdicts), and requests that are secretly demands. Also the objection 'this sounds robotic' — answer honestly: scaffolding sounds like scaffolding; fluency comes with reps, and the structure matters more than the phrasing.</p>
     <p class="mini"><b>Transition:</b> &ldquo;OFNR works one conversation at a time. The last section is about the climate that decides whether hard truths can be said at all.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: lab stays at full length (it IS the instruction); pair conversion shrinks to one accusation converted solo, no read-aloud round.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-candor.jpg" alt="Slide: 07 · Candor with care" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>07 · Candor with care <span class="mins">Full 11 min · Core 6</span></h2>
     <p class="purpose">Install Edmondson's psychological safety accurately (not niceness; safety plus standards) and drill the three-move opener: shared goal, work-focused observation, genuine question.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;When Google studied its own teams to find what made the best ones best, the strongest predictor wasn't talent density or seniority. It was psychological safety — and here's where everyone gets it wrong. Amy Edmondson, who named the concept, is blunt: it is not being nice. Niceness is often avoidance wearing a smile. Psychological safety is a climate where the hard thing can be SAID — candidly — and heard, because the point is learning. The skill is candor with care, and it has three moves you can hear in every good opener: name the shared goal, state the concern as an observation about the work, and end in a genuine question.&rdquo;</p>
@@ -211,8 +251,11 @@
     <p class="mini"><b>Watch for:</b> The quadrant collapse: rooms hear 'safety' and settle into niceness. Keep the 2x2 alive: safety without standards is a book club; standards without safety is fear. Neither ships great work.</p>
     <p class="mini"><b>Transition:</b> &ldquo;That's the full toolkit. Quiz first, then the card that aims one of these tools at one real relationship.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: Aristotle + not-niceness in ninety seconds, trainer on devices, cut the video (assign); the draft-aloud shrinks to one group's line judged by the room.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the six objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per big idea. This is the systems check before you write the card that leaves the room with you.&rdquo;</p>
@@ -223,8 +266,11 @@
     <p class="mini"><b>Watch for:</b> Racing. Frame it as a check before the commitment, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the only part of today that changes anything.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: keep at full length; this is the objectives' evidence.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · EI commitment card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Capstone · EI commitment card <span class="mins">Full 5 min · Core 5</span></h2>
     <p class="purpose">Convert the session into one dated behavioral commitment: one relationship, one practice, one named failure mode to avoid, one date. The transfer artifact and the Level 3 seed.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Frameworks don't change relationships; practiced behaviors do. Pick one real relationship or recurring friction — role, not name. Choose the ONE practice from today you'll bring to it: the listening habit, the reframe, candor with care, or name-it-to-tame-it. Then the honest field: what you will NOT do, because you know your failure mode in this relationship — and finally, when the first rep happens. A named practice aimed at a named relationship with a date attached is a behavior change. Everything less is a poster.&rdquo;</p>
@@ -235,8 +281,11 @@
     <p class="mini"><b>Watch for:</b> Vague relationships ('everyone at work') — push to ONE role and ONE recurring friction. And practice-shopping: the right practice is the one aimed at their weakest domain, not the one that sounds most impressive.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Reference shelf in one breath, and then the send-off.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: protect at full length; never cut the capstone.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here as flip cards — including 'faux feeling,' for the next time someone tells you they feel ignored.&rdquo;</p>
@@ -247,8 +296,11 @@
     <p class="mini"><b>Watch for:</b> Don't tour all thirteen cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One rep left.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip; point at it verbally from the closing slide.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 2 min · Core 2</span></h2>
     <p class="purpose">Convert cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The whole session in one breath: the evidence says this skill is underpriced, the map says start with noticing, the window says ask for the feedback you can't generate yourself, the label turns the volume down, the rubric makes listening real, the four parts disarm the accusation, and candor with care is how teams get better instead of quieter. You have a card. Before you go: your practice, and your day. Say it out loud — spoken commitments stick.&rdquo;</p>
@@ -259,6 +311,7 @@
     <p class="mini"><b>Watch for:</b> Cards that quietly skipped the date. The commitment round catches them: no day, no commitment; help them pick one on the spot.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Go run the rep. And when the answer to your blind-spot question comes back — and it will sting a little — write it down. That sting is the sound of the window opening.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
+    </div>
   </div>
   <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </div>
