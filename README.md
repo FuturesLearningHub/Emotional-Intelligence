@@ -9,12 +9,12 @@ self-paced review. Private by design — every personal exercise runs on
 roles (never names) and nothing typed is saved or sent anywhere.
 
 Part of the Vanderbilt Learning Series. Catalog:
-[Course Library](https://me5231979.github.io/Course_Library/) ·
-Sister programs: [Navigating Difficult Conversations](https://me5231979.github.io/Difficult_Conversations/),
-[Coaching for Performance](https://me5231979.github.io/Coaching-for-Performance/)
+[Course Library](https://flh-learning-library.vercel.app/) ·
+Sister programs: [Navigating Difficult Conversations](https://futureslearninghub.github.io/Difficult_Conversations/),
+[Coaching for Performance](https://futureslearninghub.github.io/Coaching-for-Performance/)
 
-- **Learner edition:** https://me5231979.github.io/Emotional-Intelligence/
-- **Facilitator edition:** https://me5231979.github.io/Emotional-Intelligence/facilitator/
+- **Learner edition:** https://futureslearninghub.github.io/Emotional-Intelligence/
+- **Facilitator edition:** https://futureslearninghub.github.io/Emotional-Intelligence/facilitator/
 
 ## Running it
 
